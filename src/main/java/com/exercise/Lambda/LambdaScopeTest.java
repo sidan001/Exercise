@@ -41,7 +41,6 @@ public class LambdaScopeTest {
 
 		}
 		
-		
 		private String getName() {
 			return "hello";
 		}

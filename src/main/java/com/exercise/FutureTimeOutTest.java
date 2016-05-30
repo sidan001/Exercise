@@ -13,14 +13,6 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月11日 下午4:45:42
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class FutureTimeOutTest {
 
 	public static void main(String[] args) {
