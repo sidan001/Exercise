@@ -7,14 +7,6 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年3月25日 下午4:01:17 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class BooleanPermissions  implements Cloneable, Comparable  {
 	private static Logger logger = Logger.getLogger(BooleanPermissions.class);
 

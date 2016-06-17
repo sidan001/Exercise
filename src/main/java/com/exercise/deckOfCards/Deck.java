@@ -3,14 +3,6 @@
  */
 package com.exercise.deckOfCards;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月20日 下午3:44:59
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class Deck {
 	public static int numSuits = 4;
 	public static int numRanks = 13;

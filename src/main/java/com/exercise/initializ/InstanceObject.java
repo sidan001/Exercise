@@ -3,14 +3,6 @@
  */
 package com.exercise.initializ;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月20日 下午2:23:35 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class InstanceObject extends AbstractInnitiallizClass {
 
 	/* (non-Javadoc)

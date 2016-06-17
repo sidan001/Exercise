@@ -14,14 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月26日 下午1:38:02 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
+
 public class CustomTextFieldSample extends Application {
 	 final static Label label = new Label();
 	 

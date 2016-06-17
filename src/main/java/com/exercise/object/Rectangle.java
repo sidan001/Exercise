@@ -5,12 +5,6 @@ package com.exercise.object;
 
 /**
  *  长方形；矩形;
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月19日 下午4:59:45
- * @Description
- * @version 1.0
- * @since
- * 
  */
 public class Rectangle {
 	public int width = 0;

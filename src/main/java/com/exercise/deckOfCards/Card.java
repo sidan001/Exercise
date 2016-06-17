@@ -3,14 +3,6 @@
  */
 package com.exercise.deckOfCards;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月20日 下午3:43:52
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class Card {
 	private final int rank;
 	private final int suit;

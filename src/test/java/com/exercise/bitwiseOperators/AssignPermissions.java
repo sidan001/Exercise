@@ -14,14 +14,6 @@ import junit.framework.TestSuite;
 
 import org.apache.log4j.Logger;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年3月29日 下午12:55:22 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class AssignPermissions extends TestCase {
 	private static Logger logger = Logger.getLogger(AssignPermissions.class);
 

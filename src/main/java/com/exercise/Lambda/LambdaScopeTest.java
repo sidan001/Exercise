@@ -5,14 +5,6 @@ package com.exercise.Lambda;
 
 import java.util.function.Consumer;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月27日 下午6:15:06
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class LambdaScopeTest {
 	public int x = 0;
 

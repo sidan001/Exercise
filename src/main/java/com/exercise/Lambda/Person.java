@@ -6,15 +6,6 @@ package com.exercise.Lambda;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月26日 下午5:09:07
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class Person {
 	public enum Sex {
 		MALE, FEMALE

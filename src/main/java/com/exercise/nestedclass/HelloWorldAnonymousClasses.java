@@ -3,14 +3,6 @@
  */
 package com.exercise.nestedclass;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月26日 下午1:24:34 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class HelloWorldAnonymousClasses {
 	interface HelloWorld {
         public void greet();

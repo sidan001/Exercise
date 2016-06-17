@@ -3,14 +3,6 @@
  */
 package com.exercise.breakStatement;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月18日 下午3:45:02 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class BreakWithLabelDemo {
 	 public static void main(String[] args) {
 

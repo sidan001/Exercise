@@ -23,11 +23,6 @@ package com.exercise.comput;
  * 所以总结起来通用公式为：
  * abcd.efg(2)=d*2<sup>0</sup>+c*2<sup>1</sup>+b*2<sup>2</sup>+a*2<sup>3</sup>+e*2<sup>-1</sup>+f*2<sup>-2</sup>+g*2<sup>-3</sup>
  * </pre>
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年3月24日 下午4:18:33
- * @Description
- * @version 1.0
- * @since
  * 
  */
 public class BitComput {

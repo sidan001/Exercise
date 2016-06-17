@@ -3,14 +3,6 @@
  */
 package com.exercise.object;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月19日 下午5:01:07
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class CreateObjectDemo {
 	public static void main(String[] args) {
 

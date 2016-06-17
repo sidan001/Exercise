@@ -3,14 +3,6 @@
  */
 package com.exercise.operators;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月11日 下午1:29:12 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class BitDemo {
 	public static void main(String[] args) {
         int bitmask = 0x000F;

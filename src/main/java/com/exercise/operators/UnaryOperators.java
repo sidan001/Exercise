@@ -3,14 +3,6 @@
  */
 package com.exercise.operators;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月11日 下午1:15:57 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class UnaryOperators {
 	public static void main(String[] args) {
         int result = +1;

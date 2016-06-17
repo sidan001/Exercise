@@ -126,7 +126,12 @@ public class HttpRequest {
     
     public static void main(String[] args) {
 //    	String str = HttpRequest.sendGet("http://127.0.0.1:8080/ucf-webapp/api/ew_identity_check/%E9%99%88%E5%A9%89%E5%A8%A9/360123199311211925/www/Rock5678", "");
-    	String str = HttpRequest.sendPost("http://127.0.0.1:8080/ucf-webapp/api/ewe_sms_api/", "mobile=18221040865&text=testsssss&loginName=www&password=Rock5678");
+//    	String str = HttpRequest.sendPost("http://127.0.0.1:8080/ucf-webapp/api/ewe_sms_api/", "mobile=18221040865&text=testsssss&loginName=www&password=Rock5678");
+    	String str = HttpRequest.sendPost("http://192.168.1.107:8080/ucf-webapp/api/dhf_BlackList_check_api/", "name=陈红娟&idNumber=33062219710914522X&queryReason=99&loginName=likun&password=likun123");
+    	   	
+    	
+    	
+    	
     	System.out.println(str);
 	}
 }

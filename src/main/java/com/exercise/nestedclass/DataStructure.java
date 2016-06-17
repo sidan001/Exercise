@@ -3,14 +3,6 @@
  */
 package com.exercise.nestedclass;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月26日 上午11:07:23
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class DataStructure {
 
 	// Create an array

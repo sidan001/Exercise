@@ -5,14 +5,6 @@ package com.ewe.fastjson;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
-/**
- * @author   E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年3月22日 下午2:49:25 
- * @Description 
- * @version 1.0 
- * @since  
- *  
- */
 public class User {
 	private Long   id;
     private String name;

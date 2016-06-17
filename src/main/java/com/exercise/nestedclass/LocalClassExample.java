@@ -5,12 +5,6 @@ package com.exercise.nestedclass;
 
 /**
  *validates two phone numbers. It defines the local class PhoneNumber in the method validatePhoneNumber:
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月26日 上午11:38:59
- * @Description
- * @version 1.0
- * @since
- * 
  */
 public class LocalClassExample {
 	static String regularExpression = "[^0-9]";

@@ -7,14 +7,6 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年3月25日 下午4:00:08
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class BitwisePermissions {
 
 	private static Logger logger = Logger.getLogger(BitwisePermissions.class);

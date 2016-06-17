@@ -8,14 +8,6 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月26日 下午5:21:15
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class RosterTest {
 	interface CheckPerson {
 		boolean test(Person p);

@@ -3,14 +3,6 @@
  */
 package com.exercise.deckOfCards;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月20日 下午3:47:19
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class DisplayDeck {
 	public static void main(String[] args) {
 		Deck deck = new Deck();

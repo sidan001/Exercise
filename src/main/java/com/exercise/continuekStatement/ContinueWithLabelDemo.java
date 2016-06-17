@@ -3,14 +3,6 @@
  */
 package com.exercise.continuekStatement;
 
-/**
- * @author E-mail:liuchou.ewedata.com
- * @date 创建时间：2016年5月19日 上午11:07:23
- * @Description
- * @version 1.0
- * @since
- * 
- */
 public class ContinueWithLabelDemo {
 	public static void main(String[] args) {
 
