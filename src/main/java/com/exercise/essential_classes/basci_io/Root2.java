@@ -15,5 +15,7 @@ public class Root2 {
         
         
         System.out.format("%f, %1$+020.10f %n", Math.PI);
+
+        System.out.format("%f, %<+020.10f %n", Math.PI);//specify < to match the same argument as the previous specifier.
     }
 }
