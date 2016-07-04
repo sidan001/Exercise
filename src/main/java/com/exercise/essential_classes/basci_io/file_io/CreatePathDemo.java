@@ -12,8 +12,8 @@ public class CreatePathDemo {
 		System.out.format("%s%n", p5.toUri());
 		System.out.println(p5.toAbsolutePath());
 //		System.out.println(p5.toRealPath());
-		
-		
+		Path p6 = Paths.get(System.getProperty("user.home"), "Documents/intelliJ_Workspace/Exercise");
+		System.out.println(p6.toAbsolutePath());
 		
 		Path p_resolve = Paths.get("/home/joe/foo");
 		// Result is /home/joe/foo/bar
