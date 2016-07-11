@@ -1,12 +1,17 @@
 package com.exercise.collections.set_interface;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class SetDemo {
     public static void main(String[] args) {
-        List<String> list = list = Arrays.asList("cat", "dog", "dog","ant", "ant", "bird", "cat");
+        List<String> list = Arrays.asList("cat", "dog", "dog","ant", "ant", "bird", "cat");
 
 //        Collection<String> noDups = new HashSet<String>(list);  // no duplicates
         Set<String> noDups = list.stream().collect(Collectors.toSet()); // no duplicates
