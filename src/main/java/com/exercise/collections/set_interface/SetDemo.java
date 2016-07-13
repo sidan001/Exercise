@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class SetDemo {
@@ -23,6 +24,11 @@ public class SetDemo {
         collect = list.stream().collect(Collectors.joining(","));
         System.out.println(collect);
 
+        //TreeSet按值排序
+        TreeSet<String> treeSet = new TreeSet<String>(list);
+        treeSet.add("");
+        System.out.println(treeSet);
+        
     }
 
     public static <E> Set<E> removeDups(Collection<E> c) {
