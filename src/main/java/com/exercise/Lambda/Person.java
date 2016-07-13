@@ -4,7 +4,9 @@
 package com.exercise.Lambda;
 
 import java.time.LocalDate;
+import java.time.chrono.IsoChronology;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 public class Person {
 	public enum Sex {
@@ -16,58 +18,72 @@ public class Person {
 	Sex gender;
 	String emailAddress;
 
+	Person(String nameArg, LocalDate birthdayArg,
+		   Sex genderArg, String emailArg) {
+		name = nameArg;
+		birthday = birthdayArg;
+		gender = genderArg;
+		emailAddress = emailArg;
+	}
+
 	public int getAge() {
-		int cy = LocalDate.now().getYear();
-		int by = birthday.getYear();
-		return cy - by;
+		return birthday
+				.until(IsoChronology.INSTANCE.dateNow())
+				.getYears();
 	}
 
 	public void printPerson() {
-		System.out.println(toString());
+		System.out.println(name + ", " + this.getAge());
 	}
 
-	/**
-	 * @return
-	 * 
-	 */
 	public Sex getGender() {
 		return gender;
 	}
 
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", birthday=" + birthday + ", gender="
-				+ gender + ", emailAddress=" + emailAddress + "]";
+	public String getName() {
+		return name;
 	}
 
-	/**
-	 * @return
-	 * 
-	 */
 	public String getEmailAddress() {
 		return emailAddress;
 	}
 
-	public Person(String name, LocalDate birthday, Sex gender,
-			String emailAddress) {
-		super();
-		this.name = name;
-		this.birthday = birthday;
-		this.gender = gender;
-		this.emailAddress = emailAddress;
+	public LocalDate getBirthday() {
+		return birthday;
 	}
 
-	/**
-	 * @return
-	 * 
-	 */
-	public static List<Person> createRoster() {
-		List<Person> list = new ArrayList<Person>();
-		list.add(new Person("google", LocalDate.of(1988, 2, 20), Sex.FEMALE, "google@google.com"));
-		list.add(new Person("apple", LocalDate.of(1992, 12, 20), Sex.MALE, "apple@apple.com"));
-		list.add(new Person("twitter", LocalDate.of(2010, 3, 20), Sex.FEMALE, "twitter@twitter.com"));
-		list.add(new Person("ewedata", LocalDate.of(1998, 9, 20), Sex.FEMALE, "ewedata@ewedata.com"));
-		return list;
+	public static int compareByAge(Person a, Person b) {
+		return a.birthday.compareTo(b.birthday);
 	}
+
+	public static List<Person> createRoster() {
+
+		List<Person> roster = new ArrayList<>();
+		roster.add(
+				new Person(
+						"Fred",
+						IsoChronology.INSTANCE.date(1980, 6, 20),
+						Person.Sex.MALE,
+						"fred@example.com"));
+		roster.add(
+				new Person(
+						"Jane",
+						IsoChronology.INSTANCE.date(1990, 7, 15),
+						Person.Sex.FEMALE, "jane@example.com"));
+		roster.add(
+				new Person(
+						"George",
+						IsoChronology.INSTANCE.date(1991, 8, 13),
+						Person.Sex.MALE, "george@example.com"));
+		roster.add(
+				new Person(
+						"Bob",
+						IsoChronology.INSTANCE.date(2000, 9, 12),
+						Person.Sex.MALE, "bob@example.com"));
+
+		return roster;
+	}
+
+
 
 }
