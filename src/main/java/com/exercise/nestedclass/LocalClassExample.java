@@ -12,7 +12,6 @@ public class LocalClassExample {
 	String nonstaticStr = "";
 	public static void validatePhoneNumber(String phoneNumber1,
 			String phoneNumber2) {
-
 //		final int numberLength = 10;
 
 		// Valid in JDK 8 and later:

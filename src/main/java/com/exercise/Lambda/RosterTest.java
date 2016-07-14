@@ -219,5 +219,21 @@ public class RosterTest {
 						&& p.getAge() >= 18 && p.getAge() <= 25)
 				.map(p -> p.getEmailAddress())
 				.forEach(email -> System.out.println(email));
+		
+		
+		
+		Integer totalAge = roster
+			    .stream()
+			    .mapToInt(Person::getAge)
+			    .sum();
+		System.out.println("totalAge: "+totalAge);
+		Integer totalAgeReduce = roster
+				   .stream()
+				   .map(Person::getAge)
+				   .reduce(
+				       0,
+				       (a, b) -> a + b);
+		
+		System.out.println("totalAgeReduce: "+totalAgeReduce);
 	}
 }

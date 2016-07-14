@@ -1,14 +1,12 @@
 package com.exercise.Lambda;
 
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Collection;
-import java.util.function.Supplier;
-import java.util.Set;
+import java.util.Comparator;
 import java.util.HashSet;
-import java.time.chrono.IsoChronology;
+import java.util.List;
+import java.util.Set;
+import java.util.function.Supplier;
 
 public class MethodReferencesTest {
 
@@ -35,13 +33,13 @@ public class MethodReferencesTest {
             p.printPerson();
         }
 
-
         Person[] rosterAsArray =
                 roster.toArray(new Person[roster.size()]);
 
         class PersonAgeComparator
                 implements Comparator<Person> {
-            public int compare(Person a, Person b) {
+            @Override
+			public int compare(Person a, Person b) {
                 return a.getBirthday().compareTo(b.getBirthday());
             }
         }
@@ -55,7 +53,10 @@ public class MethodReferencesTest {
                     return a.getBirthday().compareTo(b.getBirthday());
                 }
         );
-
+        //You can invoke this method instead in the body of the lambda expression:
+        Arrays.sort(rosterAsArray,
+        	    (a, b) -> Person.compareByAge(a, b)
+        	);
         // With method reference
         Arrays.sort(rosterAsArray, Person::compareByAge);
 
