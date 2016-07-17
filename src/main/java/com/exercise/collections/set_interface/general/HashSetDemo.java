@@ -3,11 +3,20 @@
  */
 package com.exercise.collections.set_interface.general;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
 
 public class HashSetDemo {
 
 	public static void main(String[] args) {
+		//HashSet 不保证插入顺序
+		List<Integer> integers = Arrays.asList(1, 2, 39, 6, 43, 6, null,78,null, 90,23, 23);
+		HashSet<Integer> integerHashSet = new HashSet<>(integers);
+		System.out.println("integerHashSet = " + integerHashSet);
+
+
 		String e = "hello";
 		
 		Element ele = new HashSetDemo().new Element();

@@ -17,6 +17,7 @@ public class SetDemo {
 //        Collection<String> noDups = new HashSet<String>(list);  // no duplicates
         Set<String> noDups = list.stream().collect(Collectors.toSet()); // no duplicates
 
+
         String collect = noDups.stream().collect(Collectors.joining(","));
         System.out.println(collect);//a,b,c
 
@@ -26,8 +27,11 @@ public class SetDemo {
 
         //TreeSet按值排序
         TreeSet<String> treeSet = new TreeSet<String>(list);
-        treeSet.add("");
+        //treeSet.add(null);    //throw java.lang.NullPointerException
         System.out.println(treeSet);
+
+        noDups.add(null);
+        System.out.println("noDups = " + noDups);
         
     }
 
