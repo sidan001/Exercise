@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,9 +37,27 @@ public class Anagrams {
 		}
 
 		// Print all permutation groups above size threshold
-		for (List<String> l : m.values())
+/*		for (List<String> l : m.values())
 			if (l.size() >= minGroupSize)
-				System.out.println(l.size() + ": " + l);
+				System.out.println(l.size() + ": " + l);*/
+		
+		
+		// Make a List of all anagram groups above size threshold.
+		List<List<String>> winners = new ArrayList<List<String>>();
+		for (List<String> l : m.values())
+		    if (l.size() >= minGroupSize)
+		        winners.add(l);
+
+		// Sort anagram groups according to size
+		Collections.sort(winners, new Comparator<List<String>>() {
+		    @Override
+			public int compare(List<String> o1, List<String> o2) {
+		        return o2.size() - o1.size();
+		    }});
+
+		// Print anagram groups.
+		for (List<String> l : winners)
+		    System.out.println(l.size() + ": " + l);
 	}
 
 	private static String alphabetize(String s) {

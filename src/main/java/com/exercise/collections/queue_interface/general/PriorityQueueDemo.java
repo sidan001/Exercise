@@ -1,7 +1,11 @@
 package com.exercise.collections.queue_interface.general;
 
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.TreeSet;
 
 public class PriorityQueueDemo {
     public static void main(String[] args) {
@@ -25,12 +29,21 @@ public class PriorityQueueDemo {
 
 
         //TODO 为什么输出不是降序,内部代码没看明白
+        /*The PriorityQueue class is a priority queue based on the heap data structure
+         * 二叉树关系的元素存储到一个数组中:
+         * 父节点为n求子节点的index： left(n) = n * 2 + 1   right(n) = n * 2 + 2 
+         * 子节点为k,求父节点的index： (k-1) >>> 1
+         * 降序排序：要求父节点要大于子节点，否则交换位置
+         */
         Comparator<Integer> integerComparator = Integer::compare;
         Comparator<Integer> reversed = integerComparator.reversed();
         PriorityQueue<Integer> descPriorityQueue = new PriorityQueue<>(reversed);
         descPriorityQueue.addAll(integers);
-        System.out.println("descPriorityQueue = " + descPriorityQueue);
-
+        //根据二叉树结构，从上到下，从左到右
+        System.out.println("descPriorityQueue = " + descPriorityQueue.toString());
+       
+   
+        
         for(int i = 1; i <=11; i++) {
             System.out.printf("inex : %s ,  %s >>> 1 = %s %n " ,i, i-1,(i-1) >>> 1);
         }
