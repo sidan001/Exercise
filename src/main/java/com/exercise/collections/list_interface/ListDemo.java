@@ -1,10 +1,7 @@
 package com.exercise.collections.list_interface;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ListDemo {
     public static void main(String[] args) {
@@ -30,5 +27,37 @@ public class ListDemo {
         Integer first = linkedList.getFirst();
         Integer last = linkedList.getLast();
         System.out.printf("getFirst() : %s , getLast() : %s %n" ,first,last);
+
+
+
+
+        List<String> nullList = null;
+        List<String> emptyList = new ArrayList<>();
+        for (String str : emptyList) {
+            System.out.println(str);
+        }
+
+        //给一个list随机加num个自身的元素
+        int size = 5;
+        int num = 10;
+        for(int i = 0;i< num;i++){
+            int random = new Random().nextInt(size);
+            System.out.println(random);
+        }
+
+        Double aa =null;
+        System.out.println(aa ==null);
+        Map<String, Double> commissionMap = new HashMap<>();
+        Double a = commissionMap.get("hello");
+//        double b = commissionMap.get("hello");
+        System.out.println(a);
+
+
+        Long b =null;
+        String s = "s" + "_"+"n"+b;
+        System.out.println(s);
+
+        System.out.println("null字符串转long："+Long.valueOf("null"));
+
     }
 }

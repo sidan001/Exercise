@@ -13,6 +13,7 @@ public class Solver {
 	final int N;
 	final float[][] data;
 	final CyclicBarrier barrier;
+	private static volatile boolean stopRequested;
 
 	class Worker implements Runnable {
 		int myRow;
@@ -22,7 +23,7 @@ public class Solver {
 		}
 		@Override
 		public void run() {
-			while (!done()) {
+			while (!stopRequested) {
 				processRow(myRow);
 				try {
 					barrier.await();
@@ -60,14 +61,15 @@ public class Solver {
 		for (int i = 0; i < N; ++i)
 			new Thread(new Worker(i)).start();
 
-		waitUntilDone();
+//		waitUntilDone();
 	}
 
 	private void waitUntilDone() {
 		System.out.println("was done！");
 	}
 	private void mergeRows() {
-		System.out.println("barrierAction：............");
+		stopRequested = true;
+		System.out.println("barrierAction： done");
 	}
 	
 	
