@@ -15,5 +15,10 @@ public class RexNum {
         System.out.println(matcher.group());
         System.out.println(matcher.start());
         System.out.println(input.substring(0, matcher.start()-2));
+
+        final boolean matches = Pattern.matches("^\\d+(,\\d+)*,?$", "1,2,12,23,14");
+        System.out.println(matches);
+
+
     }
 }

@@ -2,10 +2,7 @@ package com.effective_java.create_and_destory_obj;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -27,7 +24,31 @@ public class Test {
                 e.printStackTrace();
             }*/
 
-        System.out.printf("hello %d %n %s", 1,"s");
+//        System.out.printf("hello %d %n %s", 1,"s");
+        List<String> list=new ArrayList<String>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+
+        System.out.println(list);
+
+        List<String> unmodifiableList=Collections.unmodifiableList(list);
+
+        System.out.println(unmodifiableList);
+
+        List<String> unmodifiableList1= Collections.unmodifiableList(Arrays.asList("a","b","c"));
+        System.out.println(unmodifiableList1);
+
+        String temp=unmodifiableList.get(0);
+        System.out.println("unmodifiableList [0]："+temp);
+
+        list.add("baby");
+        System.out.println("list add a item after list:"+list);
+        System.out.println("list add a item after unmodifiableList:"+unmodifiableList);
+
+
+        unmodifiableList1.add("bb");
+        System.out.println("unmodifiableList add a item after list:"+unmodifiableList1);
 
     }
 }

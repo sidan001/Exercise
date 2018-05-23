@@ -44,5 +44,7 @@ public class PrintStreamDemo {
 
         System.out.format("%tY-%tm-%td%n", c,c,c);//2016-06-18
         System.out.format("%tY-%tB-%td%n", c,c,c);//2016-六月-18
+
+        System.out.println(String.format("%d%d",1,10025));
     }
 }

@@ -2,11 +2,10 @@ package com.exercise;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by liuchou on 16/6/28.
- */
+
 public class TestSet {
     public static void main(String[] args) {
         Set<Integer> numbers = new HashSet<Integer>();
@@ -29,5 +28,17 @@ public class TestSet {
         System.out.println("numbers2:  " + numbers2);//numbers2:  [3, 1, 2]
 
 
+
+
+
+
+
+
+
+
+        numbers2 = null;
+        for (Integer integer : numbers2) {
+            System.out.println(integer);
+        }
     }
 }
