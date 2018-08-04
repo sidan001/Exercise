@@ -76,8 +76,10 @@ public class App {
 		System.out.println("ms:" + ms);
 		
 		
-		
-		
-		
+		String str = " 449014,434781,435111,96310,449030,444927,437874,436695,437392,436154,436100,436098,279068,435251,,";
+		String[] split = str.split(",");
+		System.out.println(split);
+
+
 	}
 }

@@ -1,6 +1,8 @@
 package com.exercise.numberString;
 
 
+import java.math.BigDecimal;
+
 public class NumbersExercises {
 
     public static void  main(String args[]){
@@ -28,6 +30,10 @@ public class NumbersExercises {
 
         System.out.println(2e3);
 
+        System.out.println( new BigDecimal(12.35).multiply(new BigDecimal(100)).longValue());
+
+        Double ddd =  new BigDecimal(12.35).multiply(new BigDecimal(100)).doubleValue();
+        System.out.println(ddd.longValue());
 
 
     }

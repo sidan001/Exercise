@@ -17,7 +17,7 @@ public class BreakWithLabelDemo {
 	        int j = 0;
 	        boolean foundIt = false;
 
-	    search:
+	    	search:
 	        for (i = 0; i < arrayOfInts.length; i++) {
 	        	System.out.println(i);
 	           for (j = 0; j < arrayOfInts[i].length;j++) {
@@ -33,7 +33,18 @@ public class BreakWithLabelDemo {
 	        } else {
 	            System.out.println(searchfor + " not in the array");
 	        }
-	    }
+
+
+		 boolean foundIdx = false;
+		 findIndex:
+		 if(arrayOfInts.length > 0){
+			 search:
+			 for (i = 0; i < arrayOfInts.length; i++) {
+				 if ( i == 1) break findIndex;
+				 System.out.println("row: " + i);
+			 }
+		 }
+	}
 
 	    
 }
