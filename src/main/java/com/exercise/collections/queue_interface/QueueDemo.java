@@ -27,7 +27,7 @@ public class QueueDemo {
 		System.out.format("Retrieves, but does not remove, the head of this queue  : q.element() return %s%n",q.element());
 		printQueer(q);
 		System.out.format("Retrieves, but does not remove, the head of this queue  : q.peek() return %s%n",q.peek());
-		
+
 	}
 
 	/**

@@ -42,9 +42,10 @@ public class UseScatterGather
         bytesRead += r;
 
         System.out.println( "r "+r );
+        if (r == -1) break;
         for (int i=0; i<buffers.length; ++i) {
           ByteBuffer bb = buffers[i];
-          System.out.println( "b "+i+" "+bb.position()+" "+bb.limit() );
+          System.out.println( "b "+i+" "+bb.position()+" "+bb.limit());
         }
       }
 
