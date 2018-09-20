@@ -6,7 +6,10 @@ import java.util.HashMap;
 public class HashMapDemo {
     public static void main(String[] args) {
         HashMap<String,Integer> defaultMap = new HashMap<String,Integer>();
+        defaultMap.put("three", 3);
+        defaultMap.put("two", 2);
         defaultMap.put("one", 1);
+        defaultMap.put("xxxx", 999);
         defaultMap.put(null,null);
         System.out.println("defaultMap = " + defaultMap);
     }
