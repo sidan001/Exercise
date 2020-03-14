@@ -43,5 +43,17 @@ public class TestSet {
 
 
 
+
+
+
+
+
+
+
+
+        numbers2 = null;
+        for (Integer integer : numbers2) {
+            System.out.println(integer);
+        }
     }
 }

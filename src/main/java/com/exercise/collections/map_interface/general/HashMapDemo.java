@@ -10,8 +10,10 @@ public class HashMapDemo {
         HashMap<String,Integer> defaultMap = new HashMap<String,Integer>();
 
         System.out.println("hello world ");
+        defaultMap.put("three", 3);
+        defaultMap.put("two", 2);
         defaultMap.put("one", 1);
-        defaultMap.put("two", null);
+        defaultMap.put("xxxx", 999);
         defaultMap.put(null,null);
         System.out.println("defaultMap = " + defaultMap);
 

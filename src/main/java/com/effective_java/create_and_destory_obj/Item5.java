@@ -12,7 +12,7 @@ public class Item5 {
         System.out.println(sum);
 
         final long end = System.currentTimeMillis();
-        System.out.printf("%d ms%n", end - start);
+        System.out.printf("\u001b[34m%d ms%n", end - start);
 
     }
 }
