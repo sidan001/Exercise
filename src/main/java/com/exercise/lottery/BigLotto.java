@@ -16,14 +16,19 @@ public class BigLotto {
     }
 
     private static void randomBigLotto(int number) {
-        IntStream.range(0, number).forEach(t -> createNums());
+        randomBigLotto(number, 0);
+    }
+    private static void randomBigLotto(int number, int satgeNum) {
+        IntStream.range(0, number).forEach(t -> createNums(satgeNum));
     }
 
-    private static void createNums() {
+
+
+    private static void createNums(int satgeNum) {
         List<Integer> redBalls = IntStream.rangeClosed(1, 35).boxed().collect(Collectors.toList());
         List<Integer> buleBalls = IntStream.rangeClosed(1, 12).boxed().collect(Collectors.toList());
 
-        Random random = new Random();
+        Random random = satgeNum > 0 ? new Random(satgeNum) : new Random();
         for (int i = 0; i < 30; i++) {
             redBalls.remove(random.nextInt(redBalls.size()));
         }

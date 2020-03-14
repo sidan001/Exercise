@@ -29,5 +29,19 @@ public class TestSet {
         System.out.println("numbers2:  " + numbers2);//numbers2:  [3, 1, 2]
 
 
+        String a = "abcd";
+        String b = "abc";
+
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
+
+        String aa = new String("abc");
+        String bb = new String("abcd");
+        System.out.println(aa == bb);
+        System.out.println(aa.equals(bb));
+
+
+
+
     }
 }
