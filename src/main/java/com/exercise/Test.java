@@ -1,7 +1,7 @@
 package com.exercise;
 
-import java.util.HashSet;
-import java.util.Iterator;
+import java.lang.reflect.Field;
+import java.util.Collection;
 
 /**
  * Created by chou on 2020/2/27.
@@ -31,5 +31,37 @@ public class Test {
 //
 //        System.out.println(str4.hashCode());
 //        System.out.println(str3 == str4);//false
+
+        String zhStr = new StringBuilder("计算机").append("软件").toString();
+        System.out.println(zhStr == zhStr.intern());
+
+        String strcb = new StringBuilder("1").append("2").toString();
+        System.out.println(strcb == strcb.intern());
+
+        String javaStr = new StringBuilder("ja").append("va").toString();
+        System.out.println(javaStr == javaStr.intern());
+
+
+        int[] nums = new int[5];
+
+        nums[1]++;
+        nums[3]--;
+        System.out.println(nums[1]);
+        System.out.println(nums[3]);
+
+
+        int i = 0;
+        for (; i < 4; i++) {
+        }
+
+        System.out.println(i);
+
+        Math.random();
+
+
     }
+
 }
+
+
+
