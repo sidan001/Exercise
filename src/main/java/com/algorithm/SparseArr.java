@@ -1,6 +1,8 @@
 package com.algorithm;
 
 
+import java.util.Arrays;
+
 /**
  * 转换稀疏数组：
  * 1. 遍历原始数组，得到有效数据的个数sum
@@ -22,5 +24,85 @@ package com.algorithm;
 public class SparseArr {
     public static void main(String[] args) {
 
+        int[][] chessArr = new int[5][6];
+
+        System.out.println("=============原始数组=============");
+        print(chessArr);
+
+        System.out.println("=============填充数据=============");
+        chessArr[0][0] = 1;
+        chessArr[2][3] = 1;
+        chessArr[3][4] = 2;
+        print(chessArr);
+
+        System.out.println("=============convert to sparse array=============");
+        int[][] sparseArr = convertToSparseArr(chessArr);
+        print(sparseArr);
+
+        System.out.println("=============restore oriArr from sparseArr=======");
+
+        int[][] oriArr = restoreOriArr(sparseArr);
+
+        print(oriArr);
+
+    }
+
+    private static int[][] restoreOriArr(int[][] sparseArr) {
+        final int totalRow = sparseArr[0][0];
+        final int totalCol = sparseArr[0][1];
+        final int totalValueNum = sparseArr[0][2];
+
+        int[][] oriArr = new int[totalRow][totalCol];
+
+        if (totalValueNum > 0) {
+            for (int i = 1; i <= totalValueNum; i++) {
+                final int rowNo = sparseArr[i][0];
+                final int colNo = sparseArr[i][1];
+
+                oriArr[rowNo][colNo] = sparseArr[i][2];
+            }
+        }
+        return oriArr;
+    }
+
+    private static int[][] convertToSparseArr(int[][] chessArr) {
+        int totalNum = getChessArrValueTotalNum(chessArr);
+
+        int[][] sparseArr = new int[totalNum+1][3];
+        sparseArr[0][0] = chessArr.length;
+        sparseArr[0][1] = chessArr[0].length;
+        sparseArr[0][2] = totalNum;
+
+        int rowNum = 1;
+        for (int i = 0; i < chessArr.length; i++) {
+            for (int j = 0; j < chessArr[i].length; j++) {
+                if (chessArr[i][j] != 0) {
+                    sparseArr[rowNum][0] = i;
+                    sparseArr[rowNum][1] = j;
+                    sparseArr[rowNum][2] = chessArr[i][j];
+                    rowNum++;
+                }
+            }
+        }
+        return sparseArr;
+    }
+
+    private static int getChessArrValueTotalNum(int[][] chessArr) {
+        int totalNum = 0;
+        for (int[] ints : chessArr) {
+            for (int anInt : ints) {
+                if (anInt != 0 ) {
+                    totalNum++;
+                }
+            }
+        }
+        return totalNum;
+    }
+
+    private static void print(int[][] chessArr) {
+        for (int i = 0; i < chessArr.length; i++) {
+            final String row = Arrays.toString(chessArr[i]);
+            System.out.printf("row: %2d   %s%n", i, row);
+        }
     }
 }
