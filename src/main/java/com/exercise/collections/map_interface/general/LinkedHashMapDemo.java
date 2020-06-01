@@ -8,13 +8,12 @@ import java.util.LinkedHashMap;
  */
 public class LinkedHashMapDemo {
     public static void main(String[] args) {
-        LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
+        LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<String, String>(6, 0.75f, true);
 
         linkedHashMap.put("A", "a");
         linkedHashMap.put("Z", "z");
         linkedHashMap.put("D", "d");
         linkedHashMap.put("A", "aa");
-
 
         System.out.println(linkedHashMap);
 
